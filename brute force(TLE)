@@ -1,0 +1,10 @@
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        maxavg=-1*(10**5)
+        n=len(nums)
+        for i in range(0,n-k+1):
+            l=nums[i:i+k]
+            summ=sum(l)
+            summ=summ/k
+            maxavg=max(maxavg,summ)
+        return maxavg
